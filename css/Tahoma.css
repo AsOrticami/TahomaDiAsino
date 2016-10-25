@@ -1,0 +1,12 @@
+@charset "utf-8";
+@font-face {
+	font-family: Tahoma;
+	src: url('https://raw.githubusercontent.com/antoniushoang/fonts/master/TAHOMA.eot');
+	src: url('https://raw.githubusercontent.com/antoniushoang/fonts/master/TAHOMA.eot?#iefix') format('embedded-opentype'),
+	url('https://raw.githubusercontent.com/antoniushoang/fonts/master/TAHOMA.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+* {
+	font-family: Tahoma !important;
+}
