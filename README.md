@@ -1,5 +1,5 @@
 # Tahoma di Asino
- Repository hướng zẫn cách zùng mã **Javascript** dể hiển thị phông này cho các trang web ngoài **Quán Bựa**, trong dự án **Vietnamese writing problems: Chữ giùn cảitạo** của **An Hoàng Trung Tướng**, aka. **Zì Giùn**.
+ Repository hướng zẫn cách zùng mã **Javascript** dể hiển thị phông ***Tahoma*** mới cho các trang web ngoài **Quán Bựa**, trong dự án **Vietnamese writing problems: Chữ giùn cảitạo** của **An Hoàng Trung Tướng**, aka. **Zì Giùn**.
 
 >Chi bộ sẽ không cần cài dặt phông mới mà vẫn nghe dược cách mạng trong lòng dịch. Chỉ cần copy zòng text **<1kB** mang di muôn nơi.
 
@@ -9,7 +9,7 @@
 >- Thủ công dùng **Bookmarklet**: `>IE9, Chrome, Opera, Cốc cốc, Firefox, Tor...`.
 >- Tự động: `Chrome, Opera, Cốc cốc, Firefox, Tor,...`
 
-Phông ***Tahoma.WOFF*** mới dược Zì cung cấp **Regular**, các ký tự ở dạng Thin **Bold** _Italic_ **_Bold Italic_** nghe sẽ không dẹp cho lắm, zù vẫn theo qui chuẩn.
+***Tahoma*** mới chỉ dược Zì cung cấp **Regular**, các ký tự ở dạng Thin **Bold** _Italic_ **_Bold Italic_** nghe sẽ không dẹp cho lắm, zù vẫn theo qui chuẩn.
 
 >Chú ý: Có thể gặp lỗi `Content Security Policy` trên một số trang do thiếu thẻ `<meta/>`. Dang khắc phục...
 
@@ -23,7 +23,7 @@ Sử zụng doạn mã sau (copy):
 ```javascript
 javascript:var fontLink="https://raw.githubusercontent.com/antoniushoang/fonts/master/TAHOMA.",css="@font-face {font-family:Tahoma;src: url('"+fontLink+"eot');src:url('"+fontLink+"eot?#iefix') format('embedded-opentype'),url('"+fontLink+"woff') format('woff');font-weight:normal;font-style:normal;}*{font-family: Tahoma !important;}",head=document.head||document.getElementsByTagName("head")[0],style=document.createElement("style");style.type="text/css",style.styleSheet?style.styleSheet.cssText=css:style.appendChild(document.createTextNode(css)),head.appendChild(style);
 ```
-- Chi bộ có thể `F12` trên trình duyệt, chuyển sang tab `Console`, `Paste` doạn mã, `Enter` là có thể chạy được ngay.
+- Chi bộ có thể nhấn `F12` trên trình duyệt để mở `Inspect`, chuyển sang tab `Console`, `Paste` doạn mã, `Enter` là có thể chạy được ngay.
 
 Hoặc:
 
