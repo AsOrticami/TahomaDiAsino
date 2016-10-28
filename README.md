@@ -9,7 +9,7 @@
 >- Thủ công dùng **Bookmarklet**: `>IE9, Chrome, Opera, Cốc cốc, Firefox, Tor...`.
 >- Tự động: `Chrome, Opera, Cốc cốc, Firefox, Tor,...`
 
-***Tahoma*** mới chỉ dược Zì cung cấp **Regular**, các ký tự ở dạng Thin **Bold** _Italic_ **_Bold Italic_** nghe sẽ không dẹp cho lắm, zù vẫn theo qui chuẩn.
+***Tahoma*** mới chỉ dược Zì cung cấp **Regular BOLD**, các ký tự ở dạng Thin **_Italic_ **_Bold Italic_** nghe sẽ không dẹp cho lắm, zù vẫn theo qui chuẩn.
 
 >Chú ý: Có thể gặp lỗi `Content Security Policy` trên một số trang do thiếu thẻ `<meta/>`. Dang khắc phục...
 
@@ -21,7 +21,7 @@ Hiện tại có 2 cách, tự dộng và thủ công.
 ### 1. Bookmarklet (thủ công)
 Sử zụng doạn mã sau (copy):
 ```javascript
-javascript:var fontLink="https://raw.githubusercontent.com/antoniushoang/fonts/master/TAHOMA.",css="@font-face {font-family:Tahoma;src: url('"+fontLink+"eot');src:url('"+fontLink+"eot?#iefix') format('embedded-opentype'),url('"+fontLink+"woff') format('woff');font-weight:normal;font-style:normal;}*{font-family: Tahoma !important;}",head=document.head||document.getElementsByTagName("head")[0],style=document.createElement("style");style.type="text/css",style.styleSheet?style.styleSheet.cssText=css:style.appendChild(document.createTextNode(css)),head.appendChild(style);
+javascript:var fontLink="https://raw.githubusercontent.com/antoniushoang/fonts/master/TAHOMA",css="@font-face {font-family: Tahoma;src: url('gn_t.eot');src: url('gn_t.eot?#iefix') format('embedded-opentype'), url('gn_t.woff') format('woff');font-weight: normal;font-style: normal;}@font-face {font-family: Tahoma;src: url('gn_t_BOLD.eot');src: url('gn_t_BOLD.eot?#iefix') format('embedded-opentype'), url('gn_t_BOLD.woff') format('woff');font-weight: bold;font-style: normal;}* {font-family: Tahoma !important;}",head=document.head||document.getElementsByTagName("head")[0],style=document.createElement("style");css=css.replace(/gn_t/g,fontLink),style.type="text/css",style.styleSheet?style.styleSheet.cssText=css:style.appendChild(document.createTextNode(css)),head.appendChild(style);
 ```
 - Chi bộ có thể nhấn `F12` trên trình duyệt để mở `Inspect`, chuyển sang tab `Console`, `Paste` doạn mã, `Enter` là có thể chạy được ngay.
 
@@ -54,14 +54,11 @@ Sử zụng doạn mã sau (copy):
 // ==/UserScript==
 
 (function() {
-    var fontLink = "https://raw.githubusercontent.com/antoniushoang/fonts/master/TAHOMA.",
-	css = "@font-face {font-family:Tahoma;src: url('" +
-        fontLink + "eot');src:url('" +
-        fontLink + "eot?#iefix') format('embedded-opentype'),url('" +
-        fontLink + "woff') format('woff');font-weight:normal;font-style:normal;}" + 
-        "*{font-family: Tahoma !important;}",
+    var fontLink = "https://raw.githubusercontent.com/antoniushoang/fonts/master/TAHOMA",
+	css = "@font-face {font-family: Tahoma;src: url('gn_t.eot');src: url('gn_t.eot?#iefix') format('embedded-opentype'), url('gn_t.woff') format('woff');font-weight: normal;font-style: normal;}@font-face {font-family: Tahoma;src: url('gn_t_BOLD.eot');src: url('gn_t_BOLD.eot?#iefix') format('embedded-opentype'), url('gn_t_BOLD.woff') format('woff');font-weight: bold;font-style: normal;}* {font-family: Tahoma !important;}",
         head = document.head || document.getElementsByTagName("head")[0],
         style = document.createElement("style");
+    css = css.replace(/gn_t/g, fontLink);
     style.type = "text/css";
     if (style.styleSheet){
         style.styleSheet.cssText = css;
