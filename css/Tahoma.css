@@ -7,6 +7,14 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: Tahoma;
+	src: url('https://raw.githubusercontent.com/antoniushoang/fonts/master/TAHOMA_BOLD.eot');
+	src: url('https://raw.githubusercontent.com/antoniushoang/fonts/master/TAHOMA_BOLD.eot?#iefix') format('embedded-opentype'),
+	url('https://raw.githubusercontent.com/antoniushoang/fonts/master/TAHOMA_BOLD.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
 * {
 	font-family: Tahoma !important;
 }
